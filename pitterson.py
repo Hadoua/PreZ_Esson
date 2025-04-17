@@ -28,7 +28,7 @@ def sidebar_summary():
     image = Image.open('img3.jpg')
     st.sidebar.image(image, width=750)
     st.sidebar.markdown("""
-    **Data Scientist** with 3 years of experience in the insurance industry, focusing on P&C insurance, pricing, and claims. Holds a master's degree in data science from the Institut National des Sciences Appliquées (INSA) Rouen in France, with previous experience in the banking sector.
+    **Data scientist** with 3 years of experience in the insurance industry, focusing on P&C insurance, pricing, and claims. Holds a master's degree in data science from the Institut National des Sciences Appliquées (INSA) Rouen in France, with previous experience in the banking sector.
 """)
     st.sidebar.markdown("[View my LinkedIn profile](https://www.linkedin.com/in/pitterson-ibara-7b29995a/)")
 
@@ -37,9 +37,9 @@ def sidebar_summary():
 def zindi_challenge(icons_path):
     st.subheader("Clinical Reasoning Challenge")
     st.write("""
-             The Kenya Clinical Reasoning Challenge is a Natural Language Processing predictive challenge commissioned by the Path Living Labs team in collaboration with Moi University. In this challenge, participants are tasked with predicting clinicians' responses to 400 clinical scenarios based on information collected by nurses in direct contact with patients. The vignettes include details such as the nurse's background, patient demographics, presenting symptoms, relevant clinical findings, and a specific clinical question intended for the clinician. These elements enable clinicians to engage in clinical reasoning, develop a differential diagnosis, formulate a management plan, and provide specific answers to the scenario questions, reflecting the constraints and realities of the Kenyan healthcare system.
+             The kenya clinical reasoning challenge is a Natural Language Processing predictive challenge commissioned by the Path Living Labs team in collaboration with Moi University. In this challenge, participants are tasked with predicting clinicians' responses to 400 clinical scenarios based on information collected by nurses in direct contact with patients. The vignettes include details such as the nurse's background, patient demographics, presenting symptoms, relevant clinical findings, and a specific clinical question intended for the clinician. These elements enable clinicians to engage in clinical reasoning, develop a differential diagnosis, formulate a management plan, and provide specific answers to the scenario questions, reflecting the constraints and realities of the Kenyan healthcare system.
     
-     In this project, I fine-tuned a T5 Transformer model.
+     In this project, I fine-tuned a T5 transformer model.
      """)
     images = {
         "Python": get_image_as_base64(os.path.join(icons_path, "python.png")),
@@ -66,7 +66,7 @@ def portfolio_creation(icons_path):
     st.markdown("<hr style='margin: 20px 0;'>", unsafe_allow_html=True)
 
 def chatbot(icons_path):
-    st.subheader("Exploring Question-Answering with RAG")
+    st.subheader("Exploring question-answering with RAG")
     st.write("""
     In this project, I implemented a question-answering system using Retrieval-Augmented Generation (RAG) with Hugging Face. The system is designed to read and interpret information from a PDF file, utilizing natural language processing techniques to extract and answer questions based on the content.
     """)
@@ -104,7 +104,7 @@ if __name__ == "__main__":
         page_icon='👩🏻‍🚀'
     )
     
-    st.title("Selected Projects in Data Science, Machine Learning, and NLP")
+    st.title("A few projects in data science")
     st.markdown("<hr style='margin: 20px 0;'>", unsafe_allow_html=True)
     
     icons_path = "."
