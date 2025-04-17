@@ -3,7 +3,7 @@ import os
 from PIL import Image
 import base64
 
-## 100% inspired by https://medium.com/data-science/the-portfolio-that-got-me-a-data-scientist-job-513cc821bfe4 
+## This is a template 100% inspired by https://medium.com/data-science/the-portfolio-that-got-me-a-data-scientist-job-513cc821bfe4 
 ## 100% for fun and code requires optimization
 
 ## Functions 
@@ -30,7 +30,7 @@ def sidebar_summary():
     st.sidebar.markdown("[View my LinkedIn profile](https://www.linkedin.com/in/pitterson-ibara-7b29995a/)")
 
 def zindi_challenge(icons_path):
-    st.subheader("Clinical Reasoning Challenge")
+    st.subheader("Clinical reasoning challenge")
     st.write("""
              The kenya clinical reasoning challenge is a Natural Language Processing predictive challenge commissioned by the Path Living Labs team in collaboration with Moi University. In this challenge, participants are tasked with predicting clinicians' responses to 400 clinical scenarios based on information collected by nurses in direct contact with patients. The vignettes include details such as the nurse's background, patient demographics, presenting symptoms, relevant clinical findings, and a specific clinical question intended for the clinician. These elements enable clinicians to engage in clinical reasoning, develop a differential diagnosis, formulate a management plan, and provide specific answers to the scenario questions, reflecting the constraints and realities of the Kenyan healthcare system.
     
