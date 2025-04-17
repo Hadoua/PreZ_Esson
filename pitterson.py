@@ -4,9 +4,7 @@ from PIL import Image
 import base64
 
 ## 100% inspired by https://medium.com/data-science/the-portfolio-that-got-me-a-data-scientist-job-513cc821bfe4 
-## 100% for fun
-
-
+## 100% for fun and code requires optimization
 
 ## Functions 
 def get_image_as_base64(image_path):
@@ -21,7 +19,6 @@ def display_technologies(images):
     )
     st.markdown(f"<div style='display:flex; gap:10px; align-items:center;'>{techs}</div>", unsafe_allow_html=True)
     
-    
 
 def sidebar_summary():
     st.sidebar.title("Pitterson Ibara")
@@ -31,8 +28,6 @@ def sidebar_summary():
     **Data scientist** with 3 years of experience in the insurance industry, focusing on P&C insurance, pricing, and claims. Holds a master's degree in data science from the Institut National des Sciences Appliquées (INSA) Rouen in France, with previous experience in the banking sector.
 """)
     st.sidebar.markdown("[View my LinkedIn profile](https://www.linkedin.com/in/pitterson-ibara-7b29995a/)")
-
-
 
 def zindi_challenge(icons_path):
     st.subheader("Clinical Reasoning Challenge")
@@ -47,13 +42,13 @@ def zindi_challenge(icons_path):
         "Google Colab": get_image_as_base64(os.path.join(icons_path, "colab-color.png")),
     }
     display_technologies(images)
-    st.markdown("[View the code on Colab](https://github.com/your-repo/project1)")
+    st.markdown("<br>[View the code on Colab](https://github.com/your-repo/project1)", unsafe_allow_html=True)
     st.markdown("<hr style='margin: 20px 0;'>", unsafe_allow_html=True)
 
 def portfolio_creation(icons_path):
     st.subheader("Creating my portfolio with streamlit")
     st.write("""
-    This project involves creating my personal online portfolio using Streamlit. The portfolio is hosted on GitHub and developed with Visual Studio Code, Python, and Streamlit. 
+    This project involves creating my personal online portfolio using Streamlit. 
     """)
     images = {
         "Vscode": get_image_as_base64(os.path.join(icons_path, "vscode.png")),
@@ -62,7 +57,7 @@ def portfolio_creation(icons_path):
         "Python": get_image_as_base64(os.path.join(icons_path, "python.png")),
     }
     display_technologies(images)
-    st.markdown("[View the code on GitHub](https://github.com/Hadoua/PreZ_Esson)")
+    st.markdown("<br>[View the code on GitHub](https://github.com/Hadoua/PreZ_Esson)",  unsafe_allow_html=True)
     st.markdown("<hr style='margin: 20px 0;'>", unsafe_allow_html=True)
 
 def chatbot(icons_path):
@@ -78,7 +73,7 @@ def chatbot(icons_path):
         "Python": get_image_as_base64(os.path.join(icons_path, "python.png")),
     }
     display_technologies(images)
-    st.markdown("[View the code on GitHub](https://github.com/Hadoua?tab=repositories)")
+    st.markdown("<br>[View the code on GitHub](https://github.com/Hadoua?tab=repositories)",  unsafe_allow_html=True)
     st.markdown("<hr style='margin: 20px 0;'>", unsafe_allow_html=True)
 
 def challenge_paris_pompiers(icons_path):
@@ -94,7 +89,7 @@ def challenge_paris_pompiers(icons_path):
         "Sklearn": get_image_as_base64(os.path.join(icons_path, "scikit-learn.png")),
     }
     display_technologies(images)
-    st.markdown('<span style="color:blue">code coming soon</span>', unsafe_allow_html=True)
+    st.markdown('<br><span style="color:blue">Code coming soon</span>', unsafe_allow_html=True)
     st.markdown("<hr style='margin: 20px 0;'>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
@@ -107,6 +102,7 @@ if __name__ == "__main__":
     st.title("A few projects in data science")
     st.markdown("<hr style='margin: 20px 0;'>", unsafe_allow_html=True)
     
+    # Removing the path as Streamlit doesn't handle it well
     icons_path = "."
     
     sidebar_summary()
